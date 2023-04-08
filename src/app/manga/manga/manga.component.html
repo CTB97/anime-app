@@ -1,0 +1,19 @@
+<div class="jumbotron" style="background-image: url('assets/moviebanner.jpeg'); background-size: cover; height: 550px;">
+    
+</div>
+
+<div class="row mt-3 pt-2 px-2" style="background-color: rgba(26, 25, 25, 0.694);">
+
+    <div *ngFor="let mov of movie | async" class="col-md-2 mt-3">
+
+        <div class="card">
+            <img class="card-img-top" [src]="mov.backdrop_path" alt="Card image">
+            <div class="card-body" style="background-color: rgba(0, 0, 0, 0.888);">
+                <h4 class="card-title text-danger">{{mov.title}}</h4>
+                <p class="card-text text-white">Some example text.</p>
+                <button class="button text-warning">voir</button>
+            </div>
+        </div>
+
+    </div>
+</div>
